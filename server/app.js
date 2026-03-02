@@ -8,6 +8,7 @@ import authRouter from "./routes/authRouter.js";
 import usersRouter from "./routes/usersRouter.js";
 import postsRouter from "./routes/postsRouter.js";
 import commentsRouter from "./routes/commentsRouter.js";
+import globalErrorHandler from "./errors/globalErrorHandler.js";
 
 const app = express();
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
@@ -27,8 +28,8 @@ app.use("/auth", authRouter);
 app.use("/users", usersRouter);
 app.use("/posts", postsRouter);
 app.use("/comments", commentsRouter);
-// app.use("/", (req, res) => {
-//   res.send("got");
-// });
+
+// global error handler
+app.use("/", globalErrorHandler);
 
 export default app;
