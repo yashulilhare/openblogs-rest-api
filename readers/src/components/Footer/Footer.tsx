@@ -1,0 +1,31 @@
+import styles from "./Footer.module.css";
+
+export const Footer = () => {
+  return (
+    <footer className={styles.footer}>
+      <p>
+        @ 2026 Yashu |{" "}
+        <a
+          href="https://github.com/yashu483/cloudly-drive-app/blob/main/LICENSE"
+          target="_blank"
+          rel="noopener"
+        >
+          MIT License
+        </a>{" "}
+        |{" "}
+        <a
+          href="https://github.com/yashu483/cloudly-drive-app"
+          target="_blank"
+          rel="noopener"
+        >
+          Project Repository
+        </a>{" "}
+        |{" "}
+        <a href="https://github.com/yashu483" target="_blank" rel="noopener">
+          GitHub Profile
+        </a>{" "}
+        |<a href="mailto:lilhareyashu@gmail.com">Contact</a>
+      </p>{" "}
+    </footer>
+  );
+};

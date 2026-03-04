@@ -1,11 +1,16 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "@/components/Header/Header";
+import { Footer } from "@/components/Footer/Footer";
+import { Main } from "@/components/MainWrapper/Main";
 
 export const MainLayout = () => {
   return (
-    <div className="overlayer">
+    <>
       <Header />
-      <Outlet />
-    </div>
+      <Main>
+        <Outlet />
+      </Main>
+      <Footer />
+    </>
   );
 };

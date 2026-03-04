@@ -43,6 +43,12 @@ body {
   line-height: 1.5;
   margin: 0;
 }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 h1 {
   font-size: 2rem;
   line-height: 1.2;
