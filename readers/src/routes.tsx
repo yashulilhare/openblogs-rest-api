@@ -4,8 +4,8 @@ import type { RouteObject } from "react-router-dom";
 import { MainLayout } from "@/layouts/MainLayout";
 import { Homepage } from "@/pages/Homepage";
 import { Posts } from "@/pages/Posts";
-import { LogIn } from "@/features/auth/components/LogIn";
-import { Register } from "@/features/auth/components/Register";
+import { LogIn } from "@/pages/LogIn";
+import { SignUp } from "@/pages/SignUp";
 
 const routes: RouteObject[] = [
   {
@@ -26,7 +26,7 @@ const routes: RouteObject[] = [
       },
       {
         path: "register",
-        element: <Register />,
+        element: <SignUp />,
       },
     ],
   },

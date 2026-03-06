@@ -1,35 +1,3 @@
-.container {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 70px;
-}
-.waveImg > img {
-  width: 70px;
-  height: 70px;
-}
-
-.container > * {
-  text-align: center;
-}
-
-.heading {
-  color: transparent;
-  background: linear-gradient(90deg, #2563eb, #9333ea);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ctaText {
-  color: gray;
-  margin-top: 0;
-}
 
 .form {
   margin-top: 30px;
@@ -68,9 +36,4 @@
   border: none;
   outline: none;
   background: linear-gradient(90deg, #2563eb, #9333ea);
-}
-
-.registerLink {
-  margin-top: 50px;
-  color: gray;
 }
