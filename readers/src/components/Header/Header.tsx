@@ -25,13 +25,13 @@ export const Header = () => {
         <nav className={styles.navigation}>
           <ul className={styles.navUL}>
             <div className={styles.sidebarTop}>
-              <Link to="/posts">
+              <Link to="/posts" onClick={handleClick}>
                 <li key="posts">Posts</li>
               </Link>
-              <Link to="/login">
+              <Link to="/login" onClick={handleClick}>
                 <li key="login">Login</li>
               </Link>
-              <Link to="/register">
+              <Link to="/register" onClick={handleClick}>
                 <li key="register">SignUp</li>
               </Link>
             </div>

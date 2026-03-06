@@ -5,13 +5,17 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <p className={styles.githubLink}>
         <a
-          href="/"
+          href="https://github.com/yashu483/openblogs-rest-api"
           rel="noopener"
           target="_blank"
           className={styles.github}
         ></a>
         Developed by{" "}
-        <a href="" rel="noopener" target="_blank">
+        <a
+          href="https://github.com/yashu483/openblogs-rest-api"
+          rel="noopener"
+          target="_blank"
+        >
           Yashu Lilhare
         </a>
       </p>

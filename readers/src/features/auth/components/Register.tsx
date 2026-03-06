@@ -49,7 +49,7 @@ export const Register = () => {
         <button type="submit">Create Account</button>
       </form>
       <p className={style.loginLink}>
-        Already have an account? <Link to="/register">Sign in</Link>
+        Already have an account? <Link to="/login">Sign in</Link>
       </p>
     </div>
   );
