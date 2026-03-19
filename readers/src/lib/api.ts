@@ -8,11 +8,5 @@ export async function api(url: string, options: RequestInit = {}) {
     },
     ...options,
   });
-
-  const data = await res.json();
-  if (res.status >= 400) {
-    console.log(data, res);
-  }
-
-  return data;
+  return res;
 }

@@ -11,15 +11,12 @@ import { validateSignupData } from "../utils/validateUserData.js";
 const userSignup = [
   validateSignupData,
   async (req, res, next) => {
-    console.log("ran2");
-
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({
         message: errors.array(),
       });
     }
-    console.log("ran 3");
     const { username, password, fullName } = matchedData(req);
     try {
       const hash = await bcrypt.hash(password, 10);

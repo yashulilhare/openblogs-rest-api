@@ -5,4 +5,7 @@ type RegisterData = {
   fullName: string;
 };
 
-export type { RegisterData };
+type ApiError = {
+  message: string | string[] | { msg: string }[];
+};
+export type { RegisterData, ApiError };

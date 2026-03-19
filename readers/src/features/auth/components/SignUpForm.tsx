@@ -2,9 +2,24 @@ import style from "./styles/SignUpForm.module.css";
 import { useRegister } from "../hooks/useRegister";
 
 export const SignUpForm = () => {
-  const { handleSubmit } = useRegister();
+  const { handleSubmit, error } = useRegister();
+  const messages = Array.isArray(error?.message)
+    ? error.message.map((item) => (typeof item !== "string" ? item.msg : item))
+    : error?.message
+      ? [error.message]
+      : [];
+
   return (
     <form autoComplete="on" className={style.form} onSubmit={handleSubmit}>
+      {error && messages.length !== 0 && (
+        <div className={style.authErrors}>
+          <ul>
+            {messages.map((item, i) => (
+              <li key={i}>{`${item}`}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div>
         <label htmlFor="username">Username</label>
         <input type="text" name="username" id="username" required />
@@ -39,7 +54,6 @@ export const SignUpForm = () => {
           autoComplete="new-password"
         />
       </div>
-
       <button type="submit">Create Account</button>
     </form>
   );
